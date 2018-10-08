@@ -4,8 +4,9 @@
  */
 
 /**
- *
- * @author Szymon
+ *Zadanie dokonczone
+ * 
+ * @author Mateusz Ficek
  */
 public class Login {
     private String login;
