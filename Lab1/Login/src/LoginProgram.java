@@ -30,7 +30,6 @@ public class LoginProgram {
         else{
             System.out.println("Wprowadzono bledne dane");
         }
-
 	  }catch(IOException e){e.printStackTrace();}
 
     }
