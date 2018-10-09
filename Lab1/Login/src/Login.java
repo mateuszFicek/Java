@@ -5,7 +5,7 @@
 
 /**
  *Zadanie dokonczone
- * 
+ *
  * @author Mateusz Ficek
  */
 public class Login {
