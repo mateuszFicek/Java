@@ -1,13 +1,19 @@
 public class Punkt2D {
-    protected double x;
-    protected double y;
-    Punkt2D(double _x, double _y){
+    private double x;
+    private double y;
+    public String name;
+    Punkt2D(double _x, double _y, String _n){
         x = _x;
         y = _y;
+        name = _n;
     }
 
     public double getX(){
         return x;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public double getY(){
@@ -20,6 +26,9 @@ public class Punkt2D {
 
     public void setY(double m){
         this.y = m;
+    }
+    public void setName(String n){
+        this.name = n;
     }
 
     public double distance(Punkt2D n){

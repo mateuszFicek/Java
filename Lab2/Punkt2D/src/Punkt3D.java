@@ -1,7 +1,7 @@
 public class Punkt3D extends Punkt2D {
     private double z;
-    Punkt3D(double Px, double Py, double Pz){
-        super(Px,Py);
+    Punkt3D(double Px, double Py, double Pz, String Pname){
+        super(Px,Py, Pname);
         this.z = Pz;
     }
     public double getZ(){
