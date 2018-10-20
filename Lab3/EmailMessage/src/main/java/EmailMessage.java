@@ -139,13 +139,13 @@ public class EmailMessage {
 
             // Tworzenie wiadomości email
             MimeMessage message = new MimeMessage(mailSession);
-            message.setSubject(this.subject);
-            message.setContent(this.content, "text/plain; charset=ISO-8859-2");
-            for (String aTo : this.to) {
+            message.setSubject(getSubject());
+            message.setContent(getContent(), "text/plain; charset=ISO-8859-2");
+            for (String aTo : getTo()) {
                 message.addRecipient(Message.RecipientType.TO, new InternetAddress(aTo));
 
                 Transport transport = mailSession.getTransport();
-                transport.connect(HOST, PORT, this.from, PASSWORD);
+                transport.connect(HOST, PORT, getFrom(), PASSWORD);
 
                 // wysłanie wiadomości
                 transport.sendMessage(message, message
@@ -159,9 +159,8 @@ public class EmailMessage {
 
     public static void main(String[] args) {
         LinkedList<String> a = new LinkedList<String>();
-        a.add("ankietymf1@gmail.com");
-        a.add("mateuszficek@op.pl");
-        EmailMessage em = new EmailMessage.Builder("ashum295@gmail.com",a).setSubject("Test1").setContent("Test1").build();
+        a.add("test@gmail.com");
+        EmailMessage em = new EmailMessage.Builder("testFrom@gmail.com",a).setSubject("Test1").setContent("Test1").build();
         try {
             em.send();
         } catch (MessagingException e) {
