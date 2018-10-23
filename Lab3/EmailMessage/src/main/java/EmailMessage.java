@@ -154,17 +154,30 @@ public class EmailMessage {
             }
         }
 
+    private static boolean isValidEmailAddress(String email) {
+        boolean result = true;
+        try {
+            InternetAddress emailAddr = new InternetAddress(email);
+            emailAddr.validate();
+        } catch (AddressException ex) {
+            result = false;
+        }
+        if(!result){System.out.println("Bledny email");}
+        return result;
+    }
+
 
 
 
     public static void main(String[] args) {
         LinkedList<String> a = new LinkedList<String>();
         a.add("test@gmail.com");
-        EmailMessage em = new EmailMessage.Builder("testFrom@gmail.com",a).setSubject("Test1").setContent("Test1").build();
+        EmailMessage em = new EmailMessage.Builder("test@Fromgmail.com",a).setSubject("Test1").setContent("Test1").build();
+        if(isValidEmailAddress(em.from)){
         try {
             em.send();
         } catch (MessagingException e) {
             e.printStackTrace();
-        }
+        }}
     }
 }
