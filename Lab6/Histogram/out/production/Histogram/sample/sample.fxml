@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="942.0" style="-fx-background-color: #123123;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <TextField id="xValue" layoutX="130.0" layoutY="18.0" onInputMethodTextChanged="#typeStarted" promptText="Chart X value" fx:id="xValue" />
+        <TextField id="yValue" fx:id="yValue" layoutX="130.0" layoutY="60.0" onInputMethodTextChanged="#typeStarted" onKeyTyped="#typeStarted" promptText="Chart Y value" />
+        <Text fill="WHITE" layoutX="70.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X value :" wrappingWidth="93.99999976158142" />
+        <Text fill="WHITE" layoutX="70.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y value :" wrappingWidth="93.99999976158142" />
+        <BarChart id="chart" fx:id="histogram" barGap="2.0" categoryGap="5.0" layoutX="21.0" layoutY="103.0" prefHeight="551.0" prefWidth="894.0" >
+            <xAxis>
+                <CategoryAxis animated="false" side="BOTTOM" fx:id="xAxis" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" />
+            </yAxis>
+         <effect>
+            <ColorAdjust />
+         </effect>
+        </BarChart>
+        <Button id="addButton" fx:id="addValueButton" disable="true" layoutX="311.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#addValueOnClick" prefHeight="17.0" prefWidth="94.0" text="Add" />
+        <Button id="addButton" fx:id="removeValueButton" disable="true" layoutX="311.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#removeButtonPressed" prefHeight="25.0" prefWidth="94.0" text="Remove" />
+    </children>
+</Pane>

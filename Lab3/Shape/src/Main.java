@@ -40,6 +40,7 @@ public class Main {
     public static void dodaj(){
         Scanner in = new Scanner(System.in);
         int wybor;
+        int dlg;
         String nazwa;
         System.out.println("1.Dodaj kolo\n2.Dodaj kwadrat\n3.Dodaj trojkat");
         wybor = in.nextInt();
@@ -48,21 +49,30 @@ public class Main {
                 System.out.println("Podaj nazwe kola");
                 in = new Scanner(System.in);
                 nazwa = in.nextLine();
-                lista.add(new Circle(nazwa));
+                in = new Scanner(System.in);
+                System.out.println("Podaj dlugosc:");
+                dlg = in.nextInt();
+                lista.add(new Circle(nazwa,dlg));
                 break;
             }
             case 2:{
                 System.out.println("Podaj nazwe kwadratu");
                 in = new Scanner(System.in);
                 nazwa = in.nextLine();
-                lista.add(new Square(nazwa));
+                in = new Scanner(System.in);
+                System.out.println("Podaj dlugosc:");
+                dlg = in.nextInt();
+                lista.add(new Square(nazwa,dlg));
                 break;
             }
             case 3:{
                 System.out.println("Podaj nazwe trojkata");
                 in = new Scanner(System.in);
                 nazwa = in.nextLine();
-                lista.add(new Triangle(nazwa));
+                in = new Scanner(System.in);
+                System.out.println("Podaj dlugosc:");
+                dlg = in.nextInt();
+                lista.add(new Triangle(nazwa,dlg));
                 break;
             }
             default:{

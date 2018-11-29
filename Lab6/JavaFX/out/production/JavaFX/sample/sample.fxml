@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="433.0" prefWidth="325.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints maxWidth="73.0" minWidth="73.0" prefWidth="73.0" />
+      <ColumnConstraints maxWidth="73.0" minWidth="73.0" prefWidth="73.0" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <CheckBox mnemonicParsing="false" prefHeight="22.0" prefWidth="73.0" text="Yes?" textAlignment="JUSTIFY" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font name="Comic Sans MS Italic" size="15.0" />
+         </font></CheckBox>
+      <ColorPicker GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <ProgressBar prefHeight="43.0" prefWidth="93.0" progress="0.62" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+   </children>
+</GridPane>

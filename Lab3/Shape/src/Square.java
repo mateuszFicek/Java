@@ -1,16 +1,18 @@
 public class Square extends Shape {
-    Square(String n){
+    private int x;
+    Square(String n, int dlg){
         super(n);
+        this.x = dlg;
     }
 
     @Override
     public void draw(){
-        System.out.println("[][][][][][][][]");
-        System.out.println("[]            []");
-        System.out.println("[]            []");
-        System.out.println("[]            []");
-        System.out.println("[]            []");
-        System.out.println("[]            []");
-        System.out.println("[][][][][][][][]");
+        for (int j = 0; j < x; j++) {
+
+            for (int i = 0; i < x; i++) {
+                System.out.print("x");
+            }
+            System.out.print(System.lineSeparator());
+        }
     }
 }
