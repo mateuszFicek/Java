@@ -84,6 +84,25 @@ public class DB{
     }
     finally {
             cleanResources();
+            dropConnection();
+        }
+    }
+
+    public void selectByAuthor(String surname){
+        try {
+            connect();
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM books WHERE author like(?)");
+            ps.setObject(1,"% "+surname);
+
+            rs = ps.executeQuery();
+
+            printInformation();
+        }catch (SQLException ex){
+            // handle any errors
+
+        }finally {
+            // zwalniamy zasoby, które nie będą potrzebne
+            dropConnection();
         }
     }
 
@@ -101,7 +120,28 @@ public class DB{
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        finally {
+            dropConnection();
+        }
     }
+
+    private void dropConnection() {
+        if (rs != null) {
+            try {
+                rs.close();
+            } catch (SQLException sqlEx) { } // ignore
+            rs = null;
+        }
+
+        if (stmt != null) {
+            try {
+                stmt.close();
+            } catch (SQLException sqlEx) { } // ignore
+
+            stmt = null;
+        }
+    }
+
     public void cleanResources(){
         if (rs != null) {
             try {
