@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Pracownik.iml" filepath="$PROJECT_DIR$/.idea/modules/Pracownik.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Pracownik_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Pracownik_main.iml" group="Pracownik" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Pracownik_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Pracownik_test.iml" group="Pracownik" />
+    </modules>
+  </component>
+</project>
