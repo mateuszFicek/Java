@@ -15,17 +15,10 @@ public class DataBase{
                                 "mficek", "a78AJdNbQ33DEhZJ");
                 break;
             } catch (SQLException ex) {
-
-
                 System.out.println("SQLException: " + ex.getMessage());
                 System.out.println("SQLState: " + ex.getSQLState());
                 System.out.println("VendorError: " + ex.getErrorCode());
                 numbOfAttempts += 1;
-                // handle any errors
-
-
-
-
             } catch (Exception e) {
                 numbOfAttempts += 1;
                 e.printStackTrace();
@@ -41,17 +34,11 @@ public class DataBase{
         try {
             connect();
             stmt = conn.createStatement();
-
-            // Wyciagamy wszystkie pola z kolumny name
-            // znajdujące się w tabeli users
             rs = stmt.executeQuery("SELECT * FROM workers");
 
             printAll();
         } catch (SQLException ex) {
-            // handle any errors
-
         } finally {
-            // zwalniamy zasoby, które nie będą potrzebne
             cleanRes();
         }
     }
@@ -61,9 +48,6 @@ public class DataBase{
         try {
             connect();
             stmt = conn.createStatement();
-
-            // Wyciagamy wszystkie pola z kolumny name
-            // znajdujące się w tabeli users
             PreparedStatement statement = conn.prepareStatement("INSERT INTO workers (pesel, imie, nazwisko, wynagrodzenie)" + "VALUES (?,?,?,?)");
             statement.setString(1, worker.getPesel());
             statement.setString(2, worker.getImie());
@@ -72,10 +56,7 @@ public class DataBase{
             statement.executeUpdate();
 
         } catch (SQLException ex) {
-            // handle any errors
-
         } finally {
-            // zwalniamy zasoby, które nie będą potrzebne
             cleanRes();
         }
     }
@@ -85,7 +66,7 @@ public class DataBase{
             try {
                 rs.close();
             } catch (SQLException sqlEx) {
-            } // ignore
+            }
             rs = null;
         }
 
@@ -93,7 +74,7 @@ public class DataBase{
             try {
                 stmt.close();
             } catch (SQLException sqlEx) {
-            } // ignore
+            }
 
             stmt = null;
         }
