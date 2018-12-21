@@ -164,4 +164,12 @@ public class DB{
         System.out.println("Autor: "+rs.getString(3));
         System.out.println("Rok wydania: "+rs.getString(4));
     }
+
+    public void menu(){
+        System.out.println("Menu:");
+        System.out.println("1. Wyszukaj książkę po autorze.");
+        System.out.println("2. Wyszukaj książkę po numerze ISBN.");
+        System.out.println("3. Dodaj książkę.");
+        System.out.println("4. Wyjdź z programu.");
+    }
 }
