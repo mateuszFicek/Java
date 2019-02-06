@@ -1,10 +1,30 @@
-import org.junit.Test;
+import org.junit.*;
 
 import java.util.LinkedList;
 
 import static org.junit.Assert.*;
 
 public class TestKadry {
+
+    @Before
+    public void before(){
+        System.out.println("Before");
+    }
+
+    @BeforeClass
+    public static void beforeClass(){
+        System.out.println("BeforeClass");
+    }
+
+    @After
+    public void after(){
+        System.out.println("After");
+    }
+
+    @AfterClass
+    public static void afterClass(){
+        System.out.println("AfterClass");
+    }
 
     @Test
     public void testListyOsob(){
