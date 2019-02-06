@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#726565</color>
+    <color name="purpleChat">#b02797</color>
+    <color name="pinkPrimaryDarkChat">#C4ADAD</color>
+    <color name="darkestPink">#726565</color>
+    <color name="palePink">#FCE4EC</color>
+    <color name="transparent">#80000000</color>
+</resources>
